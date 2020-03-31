@@ -1,0 +1,45 @@
+<html></<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Guess The Number</title>
+
+  </head>
+
+
+
+  <body>
+
+      <p>What number I have on my mind?</p>
+      <p>The range is 0 to 5!</p>
+
+      <input type="text" id="enteredNum">
+
+      <hr>
+
+      <button type="button" id="checkEntNum">Check If You Got It!</button>
+
+      <script type="text/javascript">
+
+
+          document.getElementById("checkEntNum").onclick = function() {
+
+            var randomNum = Math.floor(Math.random() * 6);
+            var enteredNum = document.getElementById("enteredNum").value;
+
+
+            if (randomNum == enteredNum){
+              alert("You got it!");
+
+            }else{
+              alert("Thats not the number I had on my mind, try again! The number was " + randomNum);
+
+            }
+
+          }
+
+      </script>
+  </body>
+
+
+</html>
